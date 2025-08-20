@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .animate-gradient {
+    animation: gradient 3s ease-in-out infinite;
+    background-size: 300% 300%;
+  }
+  
+  @keyframes gradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .bg-300\% {
+    background-size: 300% 300%;
+  }
+  
+  .text-shadow-glow {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+}
